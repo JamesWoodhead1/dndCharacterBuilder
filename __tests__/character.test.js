@@ -13,6 +13,10 @@ describe(`constructor`, () => {
     const character = new Character('Razum-Dar', 'Rogue');
     expect(character.role).toEqual('Rogue');
   });
+  it('sets the race property', () => {
+    const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi');
+    expect(character.race).toEqual('Tabaxi');
+  })
   it('has an initial level of 1', () => {
     const character = new Character('Razum-Dar', 'Rogue');
     expect(character.level).toEqual(1);
