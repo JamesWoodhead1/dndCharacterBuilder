@@ -13,4 +13,16 @@ describe(`constructor`, () => {
     const character = new Character('Razum-Dar', 'Rogue');
     expect(character.role).toEqual('Rogue');
   });
+  it('has an initial level of 1', () => {
+    const character = new Character('Razum-Dar', 'Rogue');
+    expect(character.level).toEqual(1);
+  });
 });
+
+describe('levelUp', () => {
+  it('increments the character level by 1', () => {
+    const character = new Character('Razum-Dar', 'Rogue');
+    character.levelUp();
+    expect(character.level).toEqual(2);
+  })
+})
