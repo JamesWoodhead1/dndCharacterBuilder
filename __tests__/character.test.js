@@ -23,10 +23,21 @@ describe(`constructor`, () => {
   });
 });
 
+describe('fight', () => {
+  it('increments a characters experience by 1', () => {
+    const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi');
+
+    character.exp = 0;
+    character.fight();
+
+    expect(character.exp).toEqual(1);
+  })
+})
+
 describe('levelUp', () => {
   it('increments the character level by 1', () => {
     const character = new Character('Razum-Dar', 'Rogue');
     character.levelUp();
     expect(character.level).toEqual(2);
-  })
-})
+  });
+});
