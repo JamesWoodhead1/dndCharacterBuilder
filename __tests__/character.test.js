@@ -36,6 +36,11 @@ describe('fight', () => {
 
     expect(character.exp).toEqual(1);
   })
+  it('reduces HP by 1', () => {
+    const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi');
+    character.fight();
+    expect(character.HP).toEqual(9);
+  })
 })
 
 describe('levelUp', () => {

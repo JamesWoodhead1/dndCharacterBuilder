@@ -12,7 +12,7 @@ Character.prototype.levelUp = function() {
 }
 
 Character.prototype.fight = function() {
-  this.exp += 1;
+  this.exp += 1, this.HP -= 1;
 }
 
 module.exports = Character;
