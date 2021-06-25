@@ -21,6 +21,10 @@ describe(`constructor`, () => {
     const character = new Character('Razum-Dar', 'Rogue');
     expect(character.level).toEqual(1);
   });
+  it('has initial hit points of 10', () => {
+    const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi');
+    expect(character.HP).toEqual(10);
+  })
 });
 
 describe('fight', () => {

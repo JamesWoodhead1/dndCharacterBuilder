@@ -4,6 +4,7 @@ function Character(name, role, race) {
   this.race = race;
   this.level = 1;
   this.exp = 0;
+  this.HP = 10;
 }
 
 Character.prototype.levelUp = function() {
@@ -11,7 +12,7 @@ Character.prototype.levelUp = function() {
 }
 
 Character.prototype.fight = function() {
-  this.exp += 1
+  this.exp += 1;
 }
 
 module.exports = Character;
