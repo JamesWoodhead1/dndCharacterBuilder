@@ -7,7 +7,7 @@ function Character(name, role, race) {
 }
 
 Character.prototype.levelUp = function() {
-  this.level += 1;
+  this.exp = 0, this.level += 1;
 }
 
 Character.prototype.fight = function() {

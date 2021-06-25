@@ -40,4 +40,10 @@ describe('levelUp', () => {
     character.levelUp();
     expect(character.level).toEqual(2);
   });
+  it('resets experience to 0', () => {
+    const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi')
+    character.fight();
+    character.levelUp();
+    expect(character.exp).toEqual(0);
+  })
 });
