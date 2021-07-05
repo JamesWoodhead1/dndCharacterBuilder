@@ -16,15 +16,16 @@ Character.prototype = {
   }
 };
 
+
 Character.prototype.levelUp = function() {
   this.exp = 0, this.level += 1;
-}
+};
 
 Character.prototype.fight = function() {
   if (!this.isRested) {
-    throw new Error(this.name + " is too weak to fight!")
+    throw new Error(this.name + " needs to rest!")
   }
   this.exp += 1, this.HP -= 1;
-}
+};
 
 module.exports = Character;

@@ -16,7 +16,7 @@ describe(`constructor`, () => {
   it('sets the race property', () => {
     const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi');
     expect(character.race).toEqual('Tabaxi');
-  })
+  });
   it('has an initial level of 1', () => {
     const character = new Character('Razum-Dar', 'Rogue');
     expect(character.level).toEqual(1);
@@ -24,7 +24,7 @@ describe(`constructor`, () => {
   it('has initial hit points of 10', () => {
     const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi');
     expect(character.HP).toEqual(10);
-  })
+  });
 });
 
 describe('fight', () => {
@@ -44,9 +44,9 @@ describe('fight', () => {
   it('throws an error if the HP is too low to fight', () => {
     const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi');
     character.HP = 1;
-    expect(() => character.fight()).toThrow(character.name + " is too weak to fight!");
+    expect(() => character.fight()).toThrow(character.name + " needs to rest!");
   });
-})
+});
 
 describe('levelUp', () => {
   it('increments the character level by 1', () => {
@@ -59,5 +59,5 @@ describe('levelUp', () => {
     character.fight();
     character.levelUp();
     expect(character.exp).toEqual(0);
-  })
+  });
 });
