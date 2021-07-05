@@ -35,12 +35,17 @@ describe('fight', () => {
     character.fight();
 
     expect(character.exp).toEqual(1);
-  })
+  });
   it('reduces HP by 1', () => {
     const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi');
     character.fight();
     expect(character.HP).toEqual(9);
-  })
+  });
+  it('throws an error if the HP is too low to fight', () => {
+    const character = new Character('Razum-Dar', 'Rogue', 'Tabaxi');
+    character.HP = 1;
+    expect(() => character.fight()).toThrow(character.name + " is too weak to fight!");
+  });
 })
 
 describe('levelUp', () => {
